@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -32,6 +33,42 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: SafeArea(child: Column()));
+        body: Column(
+              children: <Widget>[
+                buttonsList(),
+                FlatButton(onPressed: (){}, child: Text("Button Flat")),
+                FlatButton(onPressed: (){}, child: Text("Button Flat 1")),
+                OutlineButton(onPressed: (){}, child: Text("Button Outline ")),
+                OutlineButton(onPressed: (){}, child: Text("Button Outline 1")),
+
+                Wrap(
+                  direction: Axis.horizontal,
+                  spacing: 35.0,
+                  runSpacing: 20.0,
+                  children: <Widget>[
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 2")),
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+                    RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+                  ],
+                )
+              ],
+            ),
+    );
   }
+}
+
+  Widget buttonsList(){
+    return ButtonBar(
+      alignment: MainAxisAlignment.center ,
+      children: <Widget>[
+        RaisedButton(onPressed: () {}, child: Text("Buttom 1"),),
+        RaisedButton(onPressed: () {}, child: Text("Buttom 2")),
+        RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+        RaisedButton(onPressed: () {}, child: Text("Buttom 4")),
+      ],
+    );
 }
