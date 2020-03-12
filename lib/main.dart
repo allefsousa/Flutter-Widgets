@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           buttonsList(),
           FlatButton(onPressed: () {}, child: Text("Button Flat")),
@@ -50,7 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
               RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
               RaisedButton(onPressed: () {}, child: Text("Buttom 2")),
               RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
-              RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
+              Opacity(opacity: 0.0,child: RaisedButton(onPressed: () {}, child: Text("Buttom 3")),),
+              Opacity(opacity: 0.3,child: RaisedButton(onPressed: () {}, child: Text("Buttom Opacity 0.3")),),
               RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
               RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
               RaisedButton(onPressed: () {}, child: Text("Buttom 3")),
